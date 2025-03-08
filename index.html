@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Password Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔒 Secure Password Generator</h1>
+        
+        <div class="password-display">
+            <input type="text" id="password" placeholder="Click generate to create password" readonly>
+            <button class="copy-btn" id="copyBtn">
+                <i class="far fa-copy"></i>
+                Copy
+            </button>
+        </div>
+
+        <div class="strength-indicator">
+            <div class="strength-bar" id="strengthBar"></div>
+        </div>
+
+        <div class="options">
+            <div class="option">
+                <label for="length">Password Length</label>
+                <input type="number" id="length" min="8" max="50" value="16">
+            </div>
+            <div class="option">
+                <label for="uppercase">Include Uppercase (A-Z)</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="option">
+                <label for="numbers">Include Numbers (0-9)</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="option">
+                <label for="symbols">Include Symbols (!@#$)</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+        </div>
+
+        <button id="generateBtn">
+            <i class="fas fa-sync-alt"></i>
+            Generate New Password
+        </button>
+
+        <div class="security-info">
+            <i class="fas fa-shield-halved"></i>
+            Passwords are generated locally in your browser
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
